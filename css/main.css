@@ -684,7 +684,7 @@
   line-height: 32px;
   text-align: center;
 }
-.advantage__info-item button {
+.advantage__info-item a {
   width: 260px;
   margin-top: 23px;
 }

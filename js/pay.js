@@ -1,5 +1,4 @@
 import clickToFunction from './clickToFunction.js'
-import getSelect from './getSelect.js'
 import disableVisible from './disableVisible.js'
 import openClosePopup from "./openClosePopup.js"
 

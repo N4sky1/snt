@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/choices.min.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <title>Document</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header__menu-wrap">
+            <div class="header__menu">
+                <a href="/">
+                    <img src="./img/logo-black.svg" alt="logo icon" class="header__logo">
+                </a>
+                <div class="header__menu">
+                    <span class="header__menu-history">
+                        История платежей
+                    </span>
+                    <button class="btn-primary header__pay-btn" style="display: none;">
+                        Оплатить услуги
+                    </button>
+                    <a  href="login.html" class="btn-primary header__menu-login-btn" >
+                        Войти
+                    </a>
+    
+                    <div class="header__menu-info" style="display: none;">
+                        <div class="header__menu-user">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4 21C4 17.6863 6.68629 15 10 15H14C17.3137 15 20 17.6863 20 21C20 21.5523 19.5523 22 19 22H5C4.44772 22 4 21.5523 4 21Z" fill="#63AC5A"/>
+                                <circle cx="12" cy="8" r="5" fill="#63AC5A"/>
+                            </svg>
+                            <span>8 923 145 43 43</span>
+                        </div>
+                        <button class="btn-primary header__menu-logout-btn">
+                            Выйти
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="pay">
+        <div class="pay-wrap">
+            <h1>
+                Оплата
+            </h1>
+            <div class="pay__popup">
+                <p class="pay__popup-title">
+                    По номеру участка
+                </p>
+                <div class="pay__input-wrap">
+                    <p class="pay__input-title">
+                        Введите номер участка
+                    </p>
+                    <input class="input-text pay__input" 
+                        placeholder="A-122222" type="text"
+                        onkeypress="return event.charCode === 0 || /\d/.test(String.fromCharCode(event.charCode));"
+                    >    
+                    <p class="pay__input-tip">
+                        Начислений не найдено
+                    </p>
+
+                    <div class="pay__add-place">
+                        <img src="/img/Plus.svg" alt="plus icon">
+                        <p>
+                            Добавить участок
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="pay__info">
+            <div class="pay__info-places places">
+                <div class="places__item">
+                    <div class="places__item-head">
+                        <div>
+                            <div class="checkbox"><img src="./img/checkbox.svg"></div>
+                            <p>
+                                участок № <span>А-25</span>
+                            </p>
+                        </div>
+                        <img src="/img/unwrap.svg" alt="unwrap icon" class="unwrap">
+                    </div>
+
+                    <div class="places__item-services">
+                        <div class="places__item-service member-fee">
+                            <div class="places__item-service-title">
+                                <div class="checkbox"><img src="./img/checkbox.svg"></div>
+                                <p>
+                                    Членский взнос
+                                </p>
+                            </div>
+                            <div class="places__item-service-info service-info">
+                                <div class="service-debt">
+                                    <p>
+                                        Задолженность по услуге:
+                                    </p>
+                                    <span> 5557</span><span>руб.</span>
+                                </div>
+                                <div class="service-sum">
+                                    <p class="service-info__sum-title">
+                                        Сумма к оплате по услуге:
+                                    </p>
+                                    <input type="text" class="input-text-success">
+                                </div>
+                            </div>
+                            <div class="places__item-service-delete">
+                                <img src="img/Delete.svg" alt="delete icon">
+                                <p>
+                                    Удалить услугу
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="places__item-service electric">
+                            <div class="places__item-service-title">
+                                <div class="checkbox"><img src="./img/checkbox.svg"></div>
+                                <p>
+                                    Электричество
+                                </p>
+                            </div>
+
+                            <div class="places__item-service-info service-info">
+                                <div class="electric__price">
+                                    <p>
+                                        Стоимость 1 Кв/ч:
+                                    </p>
+                                    <input type="text" class="input-text-success">
+                                </div>
+                                <div class="electric__prev-num">
+                                    <p>
+                                        Предыдущие показания:
+                                    </p>
+                                    <span></span>
+                                </div>
+                                <div class="electric__count-num">
+                                    <p>
+                                        Показания счетчика:
+                                    </p>
+                                    <span>0,0</span>
+                                </div>
+                                <div class="electric__now-num">
+                                    <p>
+                                        Текущие показания:
+                                    </p>
+                                    <span></span>
+                                </div>
+                                <div class="electric__count-num-enter">
+                                    <p>
+                                        Показания счетчика:
+                                    </p>
+                                    <input type="text" class="input-text-success">
+                                </div>
+                                <div class="service-sum">
+                                    <p class="service-info__sum-title">
+                                        Сумма к оплате по услуге:
+                                    </p>
+                                    <input type="text" class="input-text-success">
+                                </div>
+                            </div>
+
+                            <div class="places__item-service-delete">
+                                <img src="img/Delete.svg" alt="delete icon">
+                                <p>
+                                    Удалить услугу
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="places__item-service trash">
+                            <div class="places__item-service-title">
+                                <div class="checkbox"><img src="./img/checkbox.svg"></div>
+                                <p>
+                                    Вывоз мусора
+                                </p>
+                            </div>
+
+                            <div class="places__item-service-info service-info">
+                                <div class="service-debt">
+                                    <p>
+                                        Задолженность по услуге:
+                                    </p>
+                                    <span> 5557</span><span>руб.</span>
+                                </div>
+                                <div class="service-overpay">
+                                    <p>
+                                        Переплата по данной услуге: <span>0 руб.*</span>
+                                    </p>
+                                    <span>
+                                        * Переплата автоматически вычитается из суммы оплаты
+                                    </span>
+                                </div>
+                                
+                                
+                                <div class="service-sum">
+                                    <p class="service-info__sum-title">
+                                        Сумма к оплате по услуге:
+                                    </p>
+                                    <input type="text" class="input-text-success">
+                                </div>
+                            </div>
+
+                            <div class="places__item-service-delete">
+                                <img src="img/Delete.svg" alt="delete icon">
+                                <p>
+                                    Удалить услугу
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="places__add-service">
+                            <img src="/img/plus-db.svg" alt="plus icon">
+                            <p>
+                                добавить услугу
+                            </p>
+                        </div>
+                        <div class="places__bottom-line"></div>
+                    </div>
+                    
+
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <footer class="footer">
+        <div class="footer-wrap">
+            <img src="./img/logo-white.svg" alt="logo icon">
+            <div class="footer__content">
+                <div class="footer__content-wrap">
+                    <div class="footer__content-item">
+                        <p>
+                            ООО «Academ IT»
+                        </p>
+                    </div>
+                    <div class="footer__content-item">
+                        <p>
+                            ОГРН: 1165476153006
+                        </p>
+                    </div>
+                </div>
+                <div class="footer__content-wrap">
+                    <div class="footer__content-item">
+                        <a href="/pay.html">
+                            <p>Оплата</p>
+                        </a>
+                    </div>
+                    <div class="footer__content-item">
+                        <p>
+                            История платежей
+                        </p>
+                    </div>    
+                </div>
+                <div class="footer__content-wrap">
+                    <div class="footer__content-item">
+                        <img src="./img/location.svg" alt="location icon">
+                        <p>
+                            ООО «АкадемАйТи», г. Новосибирск, <br>
+                            ул. Зеленая горка, д. 1
+                        </p>
+                    </div>
+                    <div class="footer__content-item">
+                        <img src="./img/Mail.svg" alt="mail icon">
+                        <p>
+                            e1@iSnt.su
+                        </p>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </footer>
+
+    <div class="popup__add-field" style="display: none">
+        <div class="add-field__wrap">
+            <img class="add-field__close" src="./img/close-popup.svg" alt="close icon" class="add-field__close">
+            <h2>
+                Добавление участка
+            </h2>
+            <p class="add-field__add-text" style="display: none;">
+                Участок успешно добавлен.
+            </p>
+            <div class="add-field__inputs-wrap">
+                <div class="add-field__input-wrap">
+                    <p class="add-field__input-title">
+                        Выберите ваш СНТ
+                    </p>
+                    <input type="text" class="input-text" placeholder="Название СНТ">
+                </div>
+                <div class="add-field__input-wrap">
+                    <p class="add-field__input-title">
+                        Номер участка
+                    </p>
+                    <input type="text" class="input-text" placeholder="Номер вашего участка">
+                </div>
+                <div class="add-field__input-wrap">
+                    <p class="add-field__input-title">
+                        Площадь участка, м2
+                    </p>
+                    <input type="text" class="input-text" placeholder="Площадь вашего участка">
+                </div>
+                <div class="add-field__input-wrap">
+                    <p class="add-field__input-title">
+                        Комментарий
+                    </p>
+                    <input type="text" class="input-text" placeholder="Мой участок на левом берегу Обского">
+                </div>
+            </div>
+            
+            <button class="btn-primary-disable" id="add-field__add-btn" disabled>
+                Добавить участок
+            </button>
+            <button class="btn-primary add-field__ok-btn" style="display: none;">
+                ОК
+            </button>
+        </div>
+    </div>
+    
+    <div class="popup__add-service" style="display: none;">
+        <div class="add-service__wrap">
+            <img class="add-service__close" src="./img/close-popup.svg" alt="close icon">
+            <h2>
+                Добавление услуги
+            </h2>
+            <div class="add-service__select-service">
+                <p class="select-service-text">
+                    Выберите услугу
+                </p>
+                <!-- <div class="add-service__select-wrap">
+                    <select name="add-service__select" class="add-service__select" >
+                        <option class="add-service__option" value="">Выбрать услугу</option>
+                        <option class="add-service__option" value="Членский взнос">Членский взнос</option>
+                        <option class="add-service__option" value="Электричество">Электричество</option>
+                        <option class="add-service__option" value="Вывоз мусора">Вывоз мусора</option>
+                    </select>
+                </div> -->
+                <div class="add-service__select-wrap select-wrap">
+                    <img class="select-wrap__delete" src="/img/close.svg" alt="delete icon" style="display: none;">
+                    <img class="select-wrap__bird" src="./img/bird-down.svg" alt="bird icon">
+                    <input class="input-text select-wrap__input" type="text" placeholder="Выбрать услугу">
+                    <div class="select-wrap__items" style="display: none;">
+                        <div class="select-wrap__item">Членский взнос</div>
+                        <div class="select-wrap__item">Электричество</div>
+                        <div class="select-wrap__item">Вывоз мусора</div>
+                        <div class="select-wrap__item">Покраска забора</div>
+                        <div class="select-wrap__item">Стрижка травы</div>
+                        <div class="select-wrap__item">Водоснабжение</div>
+                    </div>
+                </div>
+
+            </div>
+            <button class="btn-primary-disable add-service__btn" >
+                Далее
+            </button>
+        </div>
+    </div>
+    
+    <script type="module" src="./js/choices.min.js"></script>
+    <script type="module" src="./js/main.js"></script>
+</body>
+</html>

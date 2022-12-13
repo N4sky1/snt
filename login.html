@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
+    <title>Document</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header__menu-wrap">
+            <div class="header__menu">
+                <a href="/">
+                    <img src="./img/logo-black.svg" alt="logo icon" class="header__logo">
+                </a>
+                <div class="header__menu">
+                    <span class="header__menu-history">
+                        История платежей
+                    </span>
+                    <button class="btn-primary header__pay-btn" style="display: none;">
+                        Оплатить услуги
+                    </button>
+                    <a  href="login.html" class="btn-primary header__menu-login-btn" >
+                        Войти
+                    </a>
+    
+                    <div class="header__menu-info" style="display: none;">
+                        <div class="header__menu-user">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4 21C4 17.6863 6.68629 15 10 15H14C17.3137 15 20 17.6863 20 21C20 21.5523 19.5523 22 19 22H5C4.44772 22 4 21.5523 4 21Z" fill="#63AC5A"/>
+                                <circle cx="12" cy="8" r="5" fill="#63AC5A"/>
+                            </svg>
+                            <span>8 923 145 43 43</span>
+                        </div>
+                        <button class="btn-primary header__menu-logout-btn">
+                            Выйти
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="login">
+        <div class="login-wrap">
+            <h1>
+                Вход в личный кабинет
+            </h1>
+            <div class="login__popup">
+                <p class="login__popup-text">
+                    Укажите свой номер телефона и 
+                    подтвердив его одноразовым СМС-паролем:
+                </p>
+                <div class="login__input-wrap">
+                    <input class="input-text login__input" 
+                        placeholder="Ваш телефон" type="tel"
+                        onkeypress="return event.charCode === 0 || /\d/.test(String.fromCharCode(event.charCode));">    
+                    <button class="btn-secondary-disable" id="login__btn">
+                        Войти
+                    </button>
+                    <div class="login__replace-number" style="display:none;">
+                        <img src="/img/edit.svg" alt="replace icon">
+                        <p>
+                            Изменить номер 
+                        </p>
+                    </div>
+                </div>
+                <div class="login__replace-cod" style="display:none;">
+                    <img src="/img/Resend.svg" alt="replace icon">
+                    <p>
+                        Получить код повторно
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="footer-wrap">
+            <img src="./img/logo-white.svg" alt="logo icon">
+            <div class="footer__content">
+                <div class="footer__content-wrap">
+                    <div class="footer__content-item">
+                        <p>
+                            ООО «Academ IT»
+                        </p>
+                    </div>
+                    <div class="footer__content-item">
+                        <p>
+                            ОГРН: 1165476153006
+                        </p>
+                    </div>
+                </div>
+                <div class="footer__content-wrap">
+                    <div class="footer__content-item">
+                        <a href="/pay.html">
+                            <p>Оплата</p>
+                        </a>
+                    </div>
+                    <div class="footer__content-item">
+                        <p>
+                            История платежей
+                        </p>
+                    </div>    
+                </div>
+                <div class="footer__content-wrap">
+                    <div class="footer__content-item">
+                        <img src="./img/location.svg" alt="location icon">
+                        <p>
+                            ООО «АкадемАйТи», г. Новосибирск, <br>
+                            ул. Зеленая горка, д. 1
+                        </p>
+                    </div>
+                    <div class="footer__content-item">
+                        <img src="./img/Mail.svg" alt="mail icon">
+                        <p>
+                            e1@iSnt.su
+                        </p>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </footer>
+
+
+    
+    
+    <script type="module" src="./js/main.js"></script>
+</body>
+</html>

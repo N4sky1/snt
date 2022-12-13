@@ -1,0 +1,103 @@
+@import './assists/common.scss';
+@import './assists/variables.scss';
+@import './assists/mixins.scss';
+@import './components/header.scss';
+@import './components/howWeWork.scss';
+@import './components/advantage.scss';
+@import './components/footer.scss';
+@import './components/login.scss';
+@import './components/pay.scss';
+
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+}
+b {
+    color: black;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+html {
+    overflow: -moz-scrollbars-vertical; 
+    overflow-y: scroll;
+}
+
+
+
+.choices__list {
+    @include body-regular-text;    
+}
+.choices[data-type*=select-one]  {
+    
+    .choices__inner {
+        padding: 11px 24px;
+        @include body-regular-text;
+        border: 1px solid $color-dark-blue;
+        border-radius: 8px;
+        
+        &:hover {
+            border: 2px solid $color-dark-blue;
+        }
+        &:focus {
+            
+        }
+    }
+    &.is-open {
+        .choices__inner {
+            border-radius: 8px 8px 0 0 !important;
+            border-bottom: 1px solid $color-gray !important;
+            &:hover {
+                border-bottom: 1px solid $color-gray !important;
+            }
+        }
+    }
+    
+}
+
+.choices__list--dropdown {
+    border-radius:0 0 8px 8px  !important;
+    border: 2px solid $color-dark-blue !important;
+}
+.choices[data-type*=select-one]::after {
+    content: " ";
+    display: block;
+    width: 14px; // the short bar of the mark is half as long as the long bar
+    height: 14px;
+    border: solid $color-dark-blue;
+    border-width: 0 0.2em 0.2em 0; // creates the inverted "L" shape
+    position: absolute;
+    transition: $transition;
+    right: 24px;
+    top: 40%;
+    margin-top: -0.2em;
+    -webkit-transform: rotate(45deg); // tilts the shape
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+.choices[data-type*=select-one].is-open::after {
+    content: " ";
+    display: block;
+    width: 14px; // the short bar of the mark is half as long as the long bar
+    height: 14px;
+    border: solid $color-dark-blue;
+    border-width: 0 0.2em 0.2em 0; // creates the inverted "L" shape
+    position: absolute;
+    transition: $transition;
+    right: 24px;
+    top: 40%;
+    margin-top: -0.2em;
+    -webkit-transform: rotate(225deg); // tilts the shape
+    -moz-transform: rotate(225deg);
+    -o-transform: rotate(225deg);
+    transform: rotate(225deg);
+}

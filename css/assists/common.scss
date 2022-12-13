@@ -1,0 +1,78 @@
+@import './variables.scss';
+@import './mixins.scss';
+// классы для кнопок
+.btn-primary {
+    @include btn-primary;
+}
+.btn-primary:hover {
+    @include btn-primary-hover;
+}
+.btn-primary-disable {
+    @include btn-primary-disable;
+}
+.btn-secondary {
+    @include btn-secondary;
+}
+.btn-secondary:hover {
+    @include btn-secondary-hover;
+}
+.btn-secondary-disable {
+    @include btn-secondary-disable;
+}
+// классы для кнопок конец
+
+// классы для инпутов
+.input-text {
+    @include input-text;
+}
+.input-text-success {
+    @include input-text-success;
+}
+.input-text-disable {
+    @include input-text-disable;
+}
+.imput-icon-wrap {
+    @include imput-icon-wrap;
+}
+.imput-icon-wrap-disabled {
+    @include imput-icon-wrap-disabled;
+}
+
+// классы для инпутов конец
+
+// классы для текста
+.h1-text {
+    @include  h1-text;
+}
+.h2-text {
+    @include  h2-text;
+}
+.h3-text {
+    @include  h3-text;
+}
+.body-semibold-text {
+    @include  body-semibold-text;
+}
+.body-regular-text {
+    @include  body-regular-text;
+}
+.body-small-text {
+    @include  body-small-text;
+}
+
+
+// классы для текста конец
+
+// чекбоксы 
+.checkbox {
+    @include checkbox;
+}
+
+// чекбоксы конец
+
+// стили для селект
+.select-wrap {
+    @include select;
+}
+
+// стили для селект конец

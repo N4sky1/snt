@@ -1,0 +1,283 @@
+// стили для текста
+@mixin h1-text {
+    font: {
+      family: MontserratBold;
+      size: 48px;
+    }
+    color: $color-black;
+    line-height: 64px;
+}
+@mixin h2-text {
+    font: {
+      family: MontserratSemibold;
+      size: 32px;
+    }
+    color: $color-black;
+    line-height: 44px;
+}
+@mixin h3-text {
+    font: {
+      family: MontserratSemibold;
+      size: 24px;
+    }
+    color: $color-black;
+    line-height: 36px;
+}
+@mixin body-semibold-text {
+    font: {
+      family: MontserratSemibold;
+      size: 20px;
+    }
+    color: $color-black;
+    line-height: 32px;
+}
+@mixin body-regular-text {
+    font: {
+      family: MontserratRegular;
+      size: 20px;
+    }
+    color: $color-black;
+    line-height: 32px;
+}
+@mixin body-small-text {
+    font: {
+      family: MontserratRegular;
+      size: 16px;
+    }
+    color: $color-black;
+    line-height: 22px;
+}
+// стили для текста конец
+
+// стили для кнопок
+@mixin btn-primary {
+  @include body-semibold-text;
+  cursor: pointer;
+  height: 64px;
+  width: 413px;
+  border-radius: 8px;
+  color: $color-white;
+  background-color: $color-dark-blue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid $color-dark-blue;
+  transition: $transition;
+}
+@mixin btn-primary-hover {
+  color: $color-dark-blue;
+  background-color: $color-white;
+  border: 2px solid $color-dark-blue;
+}
+@mixin btn-primary-disable {
+  @include btn-primary;
+  color: $color-white;
+  background-color: $color-blue;
+  border: 2px solid $color-white;
+}
+
+@mixin btn-secondary {
+  @include btn-primary;
+  border: 2px solid $color-white;
+}
+@mixin btn-secondary-hover {
+  color: $color-dark-blue;
+  background-color: $color-white;
+  border: 2px solid $color-white;
+}
+@mixin btn-secondary-disable {
+  @include btn-secondary;
+  color: $color-gray;
+  background-color: $color-white;
+  border: 2px solid $color-white;
+}
+
+// стили для кнопок конец
+
+// стили для инпутов
+@mixin input-text {
+  @include body-regular-text;
+  height: 64px;
+  width: 413px;
+  border-radius: 8px;
+  border: 1px solid $color-dark-blue;
+  background-color: $color-light-blue;
+  padding: 0 24px;
+  transition: $transition;
+  &::placeholder {
+    color: $color-dark-blue;
+  }
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px $color-dark-blue;
+    background-color: $color-white;
+    &::placeholder {
+      color: $color-black;
+    }
+  }
+}
+@mixin input-text-success { 
+    @include input-text;
+    background-color: $color-light-green; 
+    border: 1px solid $color-green;
+    &::placeholder {
+        color: $color-black;
+    }
+    &:focus {
+        border: 1px solid $color-dark-blue;
+    }
+}
+@mixin input-text-disable {
+    @include input-text;
+    background-color: $color-white;
+    border: 1px solid $color-gray;
+    &::placeholder {
+        color: $color-gray;
+    }
+}
+@mixin imput-icon-wrap {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    svg {
+        position: absolute;
+        right: 23px;
+        top: 21px;
+    }
+}
+@mixin imput-icon-wrap-disabled {
+    @include imput-icon-wrap;
+    path {
+        fill: $color-gray;
+    }
+}
+
+
+// стили для инпутов конец
+
+// стили для ссылок
+@mixin link-footer-action {
+    cursor: pointer;
+    transition: $transition;
+    &:hover {
+        color: $color-black;
+    }
+    &:active {
+        color: $color-gray;
+    }
+}
+
+
+// стили для ссылок конец
+
+// стили для чекбоксов
+
+@mixin checkbox {
+    content: "";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 24px;
+    min-height: 24px;
+    border-radius: 2px;
+    margin-left: 1px;
+    border: 1px solid $color-dark-blue;
+    box-sizing: border-box;
+    transition: $transition;
+    position: relative;
+    cursor: pointer;
+    &:hover {
+        box-shadow: 0 0 0 1px $color-dark-blue;
+    }
+    &.active {
+        background-color: $color-dark-blue;
+    }
+    &.disable {
+        border: 1px solid $color-gray;
+        &:hover {
+            box-shadow: 0 0 0 0;
+        }
+    }
+    img {
+        width: 16px;
+        height: 16px;
+        position: absolute;
+        top:3px;
+        right: 3px;
+    }
+}
+
+// стили для чекбоксов конец
+
+// стили для селект
+@mixin select {
+    @include body-regular-text;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    .input-text {
+        width: 100%;
+        &:focus {
+            box-shadow: none;
+            border-radius: 8px 8px 0 0;
+            border: 2px solid $color-dark-blue;
+            border-bottom: none;
+        } 
+        &:hover {
+            box-shadow: 0 0 0 1px $color-dark-blue;
+        }
+    }    
+    .select-wrap__bird {
+        position: absolute;
+        right: 24px;
+        top:30px;
+        width: 14px;
+        height: 7px;
+        transition: $transition;
+        &.icon-rotate {
+            transform: rotate(180deg);
+        }
+    }
+    .select-wrap__delete {
+        position: absolute;
+        right: 9px;
+        top: 10px;
+        width: 20px;
+        height: 20px;
+        border: 15px solid transparent;
+        box-sizing: content-box;
+    }
+    
+    .select-wrap__items {
+        border: 2px solid $color-dark-blue;
+        border-top: none;
+        border-radius:0 0 8px 8px;
+        max-height: 191px;
+        //overflow: hidden;
+        overflow: auto;
+        flex-direction: column;
+        
+        div {
+            display: flex;
+            padding: 0 24px;
+            align-content: center;
+            flex-wrap: wrap;
+            height: 63px;
+            width: 100%;
+            @include body-regular-text;
+            background-color: $color-white;
+            cursor: pointer;
+            transition: $transition;
+            &:hover {
+                background-color: $color-blue;
+                color: $color-white;
+            }
+            &:nth-last-child(1) {
+                border-radius: 0 0 8px 8px;
+            }
+        }
+    }
+}
+
+
+// стили для селект конец

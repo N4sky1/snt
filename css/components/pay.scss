@@ -1,0 +1,428 @@
+.pay {
+    width: 100vw;
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top:200px;
+}
+.pay__popup {
+    width: 100%;
+}
+.pay-wrap {
+    position: relative;
+    h1 {
+        @include h1-text;
+        position: absolute;
+        top: -100px;
+        left: 0;
+    }
+    display:flex;
+    flex-direction: column;
+    width: 300px;
+    align-items: flex-start;
+    background-color: $color-dark-blue;
+    border-radius: 8px;
+    padding:20px;
+    @media (min-width: 700px) {
+        width: 600px;
+        padding:60px 80px;
+    }
+    @media (min-width: 1000px) {
+        width: 900px;
+    }
+    @media (min-width: 1400px) {
+        width: 1300px;
+    }
+}
+.pay__input-wrap {
+    display:flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 100%;
+    input {
+        margin-right: 32px;
+        width: 100%;
+    }
+}
+.pay__popup-title {
+    @include h2-text;
+    color: $color-white;
+    margin-bottom: 32px;
+}
+.pay__input-title { 
+    @include h3-text;
+    color: $color-white;
+    margin-bottom: 16px;
+}
+.pay__input-tip {
+    @include body-regular-text;
+    color: $color-white;
+    margin-top:20px;
+}
+.pay__add-place {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-top: 16px;
+    p {
+        @include body-regular-text;
+        color: $color-white;
+        margin-left: 12px;
+        @include link-footer-action;
+    }
+}
+.popup__add-field {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:rgba(0,0,0,.8);
+    z-index:100;
+}
+.add-field__inputs-wrap {
+    display: flex;
+    flex-direction: column;
+}
+.add-field__wrap {
+    width: calc(100vw - 20px);
+    padding: 10px;
+    background-color: $color-blue;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    @media (min-width: 700px) {
+        width: 646px;
+        padding: 70px 80px 80px 80px;
+    }
+    img {
+        width: 42px;
+        height: 42px;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+        @media (min-width: 700px) {
+            top: 42px;
+        right: 42px;
+        }
+    } 
+    h2 { 
+        @include h2-text;
+        margin-bottom: 15px;
+        font-size: 25px;
+        @media (min-width: 700px) {
+            margin-bottom: 34px;
+            font-size: 32px;
+        }
+    }
+    button {
+        margin-top: 8px;
+        width: 100%;
+    }
+}
+.add-field__input-wrap {
+    display: flex;
+    flex-direction: column;
+    input {
+        margin-bottom: 10px;
+        width: 100%;
+        @media (min-width: 700px) {
+            margin-bottom: 32px;
+        }
+    }
+    p {
+        @include body-semibold-text;
+        margin-bottom: 16px;
+    }
+}
+.add-field__add-text {
+    @include body-semibold-text;
+}
+
+.pay__info {
+    display:flex;
+    flex-direction: column;
+    width: 300px;
+    align-items: flex-start;
+    border-radius: 0 0 8px 8px;
+    border: 2px solid $color-dark-blue;
+    padding:20px;
+    @media (min-width: 700px) {
+        width: 600px;
+        padding:70px 80px;
+    }
+    @media (min-width: 1000px) {
+        width: 900px;
+    }
+    @media (min-width: 1400px) {
+        width: 1300px;
+    }
+}
+.pay__info-places {
+    width: 100%;
+    display:flex;
+    flex-direction: column;
+}
+.places__item-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 32px;
+    border-bottom: 1px solid $color-blue;
+    .unwrap {
+        cursor: pointer;
+        transition: .2s;
+        &.wrap {
+            transform: rotate(180deg)
+        }
+    }
+    div {
+        display: flex;
+        align-items: center;
+        .checkbox  {
+            margin-right: 16px;
+        }
+        p {
+            @include h3-text;
+        }
+        span {
+            color: $color-dark-blue;
+        }
+    }
+}
+.places__item-service {
+    display:flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top:32px;
+    &.delete {
+        display: none;
+    }
+
+}
+.places__item-service-title {
+    display: flex;
+    align-items: center;
+    .checkbox  {
+        margin-right: 16px;
+    }
+    p {
+        @include h3-text;
+        color: $color-dark-blue;
+    }
+}
+.places__item-service-delete {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    img {
+        margin-right: 16px;
+    }
+    p {
+        @include body-semibold-text;
+        color: $color-gray;
+    }
+}
+.places__item-service-info {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    input {
+        width: 100%;
+    }
+}
+.service-info__sum-title {
+    @include body-semibold-text;
+    margin-bottom: 17px;
+}
+.service-debt {
+    display: flex;
+    align-items: center;
+    margin-bottom: 32px;
+    p {
+        @include body-regular-text;
+        margin-right: 12px;
+    }
+    span {
+    @include body-semibold-text;
+    }
+}
+.service-sum {
+    display: flex;
+    flex-direction: column;
+}
+.electric__price {
+    display: flex;
+    align-items: center;
+    margin-bottom: 32px;
+    p {
+        @include body-regular-text;
+        margin-right: 20px;
+        width: 350px;
+    }
+}
+.electric__prev-num {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+    p {
+        @include body-semibold-text;
+        margin-right: 20px;
+    }
+}
+.electric__count-num {
+    display: flex;
+    align-items: center;
+    margin-bottom: 32px;
+    p {
+        @include body-regular-text;
+        margin-right: 12px;
+    }
+    span {
+        @include body-semibold-text;
+    }
+}
+.electric__now-num {
+    display: flex;
+    align-items: center;
+    margin-bottom:  5px;
+    p {
+        @include body-semibold-text;
+        margin-right: 12px;
+    }
+}
+.electric__count-num-enter {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+    p {
+        @include body-regular-text;
+        margin-right: 20px;
+        width: 530px;
+    }
+}
+.trash {
+    .service-debt {
+        margin-bottom: 16px;
+    }
+}
+.service-overpay {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 32px;
+    p {
+        @include body-regular-text;
+        span {
+            @include body-semibold-text;
+            margin-left: 15px;
+        }
+    }
+    span {
+        @include body-small-text;
+        color: $color-dark-blue;
+        font-size: 15px;
+    }
+}
+.places__item-services {
+    transition: max-height 0.7s ease-out;
+    max-height: 3000px;
+    overflow: hidden;
+    box-sizing: border-box;
+    margin-bottom: 2px;
+    &.wrap {
+        max-height: 0px;
+    }
+}
+.places__add-service {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-top:40px;
+    img {
+        margin-right: 11px;
+    }
+    p {
+        @include body-semibold-text;
+        color: $color-dark-blue;
+    }
+}
+.places__bottom-line {
+    width:100%;
+    height: 1px;
+    background-color: $color-dark-blue;
+    margin-top:40px;
+}
+
+.popup__add-service {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:rgba(0,0,0,.8);
+    z-index:100;
+}
+
+.add-service__wrap {
+    width: calc(100vw - 20px);
+    padding: 10px;
+    background-color: $color-blue;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    @media (min-width: 700px) {
+        width: 646px;
+        padding: 70px 80px 80px 80px;
+    }
+    img {
+        width: 42px;
+        height: 42px;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+        @media (min-width: 700px) {
+            top: 42px;
+        right: 42px;
+        }
+    } 
+    h2 { 
+        @include h2-text;
+        margin-bottom: 15px;
+        font-size: 25px;
+        @media (min-width: 700px) {
+            margin-bottom: 34px;
+            font-size: 32px;
+        }
+    }
+
+    .select {
+        width: 100%;
+        display: flex;
+        div {
+            width: 100%;    
+        }
+    }
+}
+.select-service-text {
+    @include body-semibold-text;
+    margin-bottom: 16px;
+}
+.add-service__btn {
+    margin-top: 41px;
+    width: 100%;
+}
+
+.choices__list--dropdown .choices__placeholder {
+    display: none !important;
+    color: $color-dark-blue !important;
+    opacity: 1 !important;
+}

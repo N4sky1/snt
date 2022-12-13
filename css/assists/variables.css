@@ -1,0 +1,20 @@
+@font-face {
+  font-weight: normal;
+  font-family: "MontserratBold";
+  font-style: normal;
+  src: url("../fonts/Montserrat-Bold.woff2") format("woff2"), url("../fonts/Montserrat-Bold.woff") format("woff");
+}
+@font-face {
+  font-weight: normal;
+  font-family: "MontserratSemibold";
+  font-style: normal;
+  src: url("../fonts/Montserrat-SemiBold.woff2") format("woff2"), url("../fonts/Montserrat-SemiBold.woff") format("woff");
+}
+@font-face {
+  font-weight: normal;
+  font-family: "MontserratRegular";
+  font-style: normal;
+  src: url("../fonts/Montserrat-Regular.woff2") format("woff2"), url("../fonts/Montserrat-Regular.woff") format("woff");
+}
+
+/*# sourceMappingURL=variables.css.map */

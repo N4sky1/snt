@@ -45,34 +45,51 @@ function addService() {
     let close = document.querySelector('.add-service__close')
     
     let selectWrapAddService = document.querySelector('.add-service__select-wrap')
-    let input = selectWrapAddService.querySelector('.select-wrap__input')
-    let options = selectWrapAddService.querySelectorAll('.select-wrap__item')
-    let optionsWrap = selectWrapAddService.querySelector('.select-wrap__items')
-    let thenBtn = document.querySelector('.add-service__btn')
-    let iconDel = selectWrapAddService.querySelector('.select-wrap__delete')
-    let iconBird = selectWrapAddService.querySelector('.select-wrap__bird')
 
-    console.log(thenBtn);
+
+    let itemsWrapAddService = {
+        input: selectWrapAddService.querySelector('.select-wrap__input'),
+        options: selectWrapAddService.querySelectorAll('.select-wrap__item'),
+        optionsWrap: selectWrapAddService.querySelector('.select-wrap__items'),
+        thenBtn: document.querySelector('.add-service__btn'),
+        iconDel: selectWrapAddService.querySelector('.select-wrap__delete'),
+        iconBird: selectWrapAddService.querySelector('.select-wrap__bird'),
+    }
 
     clickToFunction(btnAdd, addPopup)
     
     openClosePopup([btnAdd], [close, popup], popup)
     
     let addServiceSelect = new GetSelect()
-    addServiceSelect.input = input
-    addServiceSelect.options = options
-    addServiceSelect.optionsWrap = optionsWrap
-    addServiceSelect.thenBtn = thenBtn
-    addServiceSelect.iconDel = iconDel
-    addServiceSelect.iconBird = iconBird
+    addServiceSelect.input = itemsWrapAddService.input
+    addServiceSelect.options = itemsWrapAddService.options
+    addServiceSelect.optionsWrap = itemsWrapAddService.optionsWrap
+    addServiceSelect.thenBtn = itemsWrapAddService.thenBtn
+    addServiceSelect.iconDel = itemsWrapAddService.iconDel
+    addServiceSelect.iconBird = itemsWrapAddService.iconBird
     
-
+    
+    let features = document.querySelector('.add-service__features')
+    let featuresItems = {
+        backBtn: document.querySelector('.features__back-btn')
+    }
+console.log(document.querySelector('.features__add-btn'));
 
     function addPopup() {
         addServiceSelect.initSelect()
     }
-    thenBtn.addEventListener('click', ()=>{
-        console.log(addServiceSelect.selectValue) 
+    itemsWrapAddService.thenBtn.addEventListener('click', ()=>{
+        if (itemsWrapAddService.thenBtn.classList.contains('btn-primary')) {
+            console.log(addServiceSelect.selectValue) 
+            disableVisible([itemsWrapAddService.thenBtn], [features], false)
+            itemsWrapAddService.input.disabled=true
+        }
+        
+    })
+    featuresItems.backBtn.addEventListener('click', ()=>{
+        
+        disableVisible([features], [itemsWrapAddService.thenBtn], false)
+        itemsWrapAddService.input.disabled=false
     })
 
 

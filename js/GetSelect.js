@@ -62,6 +62,7 @@ export default class GetSelect {
     }
     getExitClick = () =>  {
         this.iconDel.addEventListener('click', ()=>{ // нажатие по крестику у инпута
+            if (this.input.disabled) return
             this.input.value = ''
             disableVisible([this.iconDel], [this.iconBird], false)
             this.openOptionWrap(false)

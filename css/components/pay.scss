@@ -427,7 +427,7 @@
     opacity: 1 !important;
 }
 
-.features-electro {
+.add-service__features {
     margin-top:32px;
     p {
         @include body-semibold-text;
@@ -438,15 +438,24 @@
         width: 100%;
     } 
 }
-.features-electro__inputs-wrap {
+.features__inputs-wrap {
     display: flex;
     justify-content: space-between;
 }
-.features-electro__input-now {
+.features__input-now {
     display: flex;
     flex-direction: column;
+    width: 230px;
 }
-.features-electro__input-meter {
+.features__input-meter {
     display: flex;
     flex-direction: column;
+    width: 230px;
+}
+.features__buttons-wrap {
+    display: flex;
+    justify-content: space-between;
+    button {
+        width: 230px;
+    }
 }

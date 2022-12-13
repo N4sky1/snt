@@ -28,3 +28,20 @@ function checkbox() {
 checkbox()
 
 
+function getUrls() { // для гитхаб пейдж
+    let urls = document.querySelectorAll('a')
+    if (!window.location.href.includes("snt")) return
+    function replaceUrl(href, url) {
+        if (href.includes(url)) {
+            href = href.replace(url,`snt/${url}`)
+            console.log(href);
+        }
+    }
+    urls.forEach(a=>{
+        replaceUrl(a.href, "pay.html")
+        replaceUrl(a.href, "login.html")
+    })
+    //console.log(urls[0].href);
+}
+getUrls()
+

@@ -195,6 +195,63 @@
 .input-text-disable::placeholder {
   color: #969CA2;
 }
+.input-text-disable:focus {
+  outline: none;
+  box-shadow: 0 0 0 0;
+  background-color: #FFFFFF;
+}
+.input-text-disable:focus::placeholder {
+  color: #969CA2;
+}
+
+.input-text-uneditable {
+  font-family: MontserratRegular;
+  font-size: 20px;
+  color: #222A31;
+  line-height: 32px;
+  height: 64px;
+  width: 413px;
+  border-radius: 8px;
+  border: 1px solid #005BBA;
+  background-color: #F4F6FA;
+  padding: 0 24px;
+  transition: 0.4s;
+  background-color: #FFFFFF;
+  border: 1px solid #969CA2;
+  background-color: #C1D7EF;
+  border: 1px solid #222A31;
+}
+.input-text-uneditable::placeholder {
+  color: #005BBA;
+}
+.input-text-uneditable:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #005BBA;
+  background-color: #FFFFFF;
+}
+.input-text-uneditable:focus::placeholder {
+  color: #222A31;
+}
+.input-text-uneditable::placeholder {
+  color: #969CA2;
+}
+.input-text-uneditable:focus {
+  outline: none;
+  box-shadow: 0 0 0 0;
+  background-color: #FFFFFF;
+}
+.input-text-uneditable:focus::placeholder {
+  color: #969CA2;
+}
+.input-text-uneditable::placeholder {
+  color: #222A31;
+}
+.input-text-uneditable:focus {
+  background-color: #C1D7EF;
+}
+.input-text-uneditable:focus::placeholder {
+  color: #222A31;
+}
 
 .imput-icon-wrap {
   position: relative;

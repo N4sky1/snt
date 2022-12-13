@@ -11,7 +11,7 @@
     <header class="header">
         <div class="header__menu-wrap">
             <div class="header__menu">
-                <a href="/">
+                <a href="./">
                     <img src="./img/logo-black.svg" alt="logo icon" class="header__logo">
                 </a>
                 <div class="header__menu">
@@ -21,7 +21,7 @@
                     <button class="btn-primary header__pay-btn" style="display: none;">
                         Оплатить услуги
                     </button>
-                    <a  href="login.html" class="btn-primary header__menu-login-btn" >
+                    <a  href="./login.html" class="btn-primary header__menu-login-btn" >
                         Войти
                     </a>
     
@@ -64,7 +64,7 @@
                     </p>
 
                     <div class="pay__add-place">
-                        <img src="/img/Plus.svg" alt="plus icon">
+                        <img src="./img/Plus.svg" alt="plus icon">
                         <p>
                             Добавить участок
                         </p>
@@ -82,7 +82,7 @@
                                 участок № <span>А-25</span>
                             </p>
                         </div>
-                        <img src="/img/unwrap.svg" alt="unwrap icon" class="unwrap">
+                        <img src="./img/unwrap.svg" alt="unwrap icon" class="unwrap">
                     </div>
 
                     <div class="places__item-services">
@@ -108,7 +108,7 @@
                                 </div>
                             </div>
                             <div class="places__item-service-delete">
-                                <img src="img/Delete.svg" alt="delete icon">
+                                <img src="./img/Delete.svg" alt="delete icon">
                                 <p>
                                     Удалить услугу
                                 </p>
@@ -163,7 +163,7 @@
                             </div>
 
                             <div class="places__item-service-delete">
-                                <img src="img/Delete.svg" alt="delete icon">
+                                <img src="./img/Delete.svg" alt="delete icon">
                                 <p>
                                     Удалить услугу
                                 </p>
@@ -204,7 +204,7 @@
                             </div>
 
                             <div class="places__item-service-delete">
-                                <img src="img/Delete.svg" alt="delete icon">
+                                <img src="./img/Delete.svg" alt="delete icon">
                                 <p>
                                     Удалить услугу
                                 </p>
@@ -212,7 +212,7 @@
                         </div>
 
                         <div class="places__add-service">
-                            <img src="/img/plus-db.svg" alt="plus icon">
+                            <img src="./img/plus-db.svg" alt="plus icon">
                             <p>
                                 добавить услугу
                             </p>
@@ -227,7 +227,7 @@
     </section>
     
 
-    <footer class="footer">
+    <footer class="footer"> 
         <div class="footer-wrap">
             <img src="./img/logo-white.svg" alt="logo icon">
             <div class="footer__content">
@@ -245,7 +245,7 @@
                 </div>
                 <div class="footer__content-wrap">
                     <div class="footer__content-item">
-                        <a href="/pay.html">
+                        <a href="./pay.html">
                             <p>Оплата</p>
                         </a>
                     </div>
@@ -345,8 +345,51 @@
                     </div>
                 </div>
 
+                <div class="add-service__features features-electro">
+                    <p>
+                        Тип начисления оплаты
+                    </p>
+                    <input disabled type="text" class="input-text-uneditable" placeholder="По счётчику">
+
+                    <p>
+                        Тариф, руб
+                    </p>
+                    <input type="text" class="input-text" placeholder="Стоимость">
+
+                    <div class="features-electro__inputs-wrap">
+                        <div class="features-electro__input-now">
+                            <p>
+                                Текущие показания 
+                            </p>
+                            <input type="text" class="input-text" placeholder="0,0">
+                        </div>
+                        <div class="features-electro__input-meter">
+                            <p>
+                                Единица измерения 
+                            </p>
+                            <div class="features-electro__select-wrap select-wrap">
+                                <img class="select-wrap__delete" src="./img/close.svg" alt="delete icon" style="display: none;">
+                                <img class="select-wrap__bird" src="./img/bird-down.svg" alt="bird icon">
+                                <input class="input-text select-wrap__input" type="text" placeholder="Выбрать">
+                                <div class="select-wrap__items" style="display: none;">
+                                    <div class="select-wrap__item">кв/ч</div>
+                                    <div class="select-wrap__item">общий</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="features-electro__buttons-wrap">
+                        <button class="btn-primary">
+                            Назад
+                        </button>
+                        <button class="btn-primary-disable">
+                            Добавить
+                        </button>
+                    </div>
+                </div>
+
             </div>
-            <button class="btn-primary-disable add-service__btn" >
+            <button class="btn-primary-disable add-service__btn" style="display: none;">
                 Далее
             </button>
         </div>

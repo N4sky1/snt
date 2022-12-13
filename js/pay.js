@@ -1,6 +1,7 @@
 import clickToFunction from './clickToFunction.js'
 import disableVisible from './disableVisible.js'
 import openClosePopup from "./openClosePopup.js"
+import GetSelect from './getSelect.js'
 
 function pay() {
 
@@ -42,22 +43,40 @@ function addService() {
     let btnAdd = document.querySelector('.places__add-service')
     let popup = document.querySelector('.popup__add-service')
     let close = document.querySelector('.add-service__close')
-    let input = document.querySelector('.select-wrap__input')
-    let options = document.querySelectorAll('.select-wrap__item')
-    let optionsWrap = document.querySelector('.select-wrap__items')
+    
+    let selectWrapAddService = document.querySelector('.add-service__select-wrap')
+    let input = selectWrapAddService.querySelector('.select-wrap__input')
+    let options = selectWrapAddService.querySelectorAll('.select-wrap__item')
+    let optionsWrap = selectWrapAddService.querySelector('.select-wrap__items')
     let thenBtn = document.querySelector('.add-service__btn')
-    let iconDel = document.querySelector('.select-wrap__delete')
-    let iconBird = document.querySelector('.select-wrap__bird')
+    let iconDel = selectWrapAddService.querySelector('.select-wrap__delete')
+    let iconBird = selectWrapAddService.querySelector('.select-wrap__bird')
 
+    console.log(thenBtn);
 
     clickToFunction(btnAdd, addPopup)
     
     openClosePopup([btnAdd], [close, popup], popup)
     
+    let addServiceSelect = new GetSelect()
+    addServiceSelect.input = input
+    addServiceSelect.options = options
+    addServiceSelect.optionsWrap = optionsWrap
+    addServiceSelect.thenBtn = thenBtn
+    addServiceSelect.iconDel = iconDel
+    addServiceSelect.iconBird = iconBird
+    
+
 
     function addPopup() {
-        clickToFunction(input, ()=>openOptionWrap(true))
+        addServiceSelect.initSelect()
     }
+    thenBtn.addEventListener('click', ()=>{
+        console.log(addServiceSelect.selectValue) 
+    })
+
+
+/*     
     function changeInputBorders(open) { // изменение бордера у инпута
         let data = {
             boxShadow: open ? "none" : "",
@@ -137,7 +156,7 @@ function addService() {
         } else {
             openOptionWrap(true)
         }
-    })
+    }) */
 }
 
 export {pay}

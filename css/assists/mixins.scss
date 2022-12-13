@@ -134,6 +134,30 @@
     &::placeholder {
         color: $color-gray;
     }
+    &:focus {
+        outline: none;
+        box-shadow: 0 0 0 0;
+        background-color: $color-white;
+        &::placeholder {
+          color: $color-gray; 
+        }
+    }
+    
+}
+@mixin input-text-uneditable {
+    @include input-text-disable;
+    background-color: $color-blue;
+    border: 1px solid $color-black;
+    &::placeholder {
+        color: $color-black;
+    }
+    &:focus {
+        background-color: $color-blue;
+        &::placeholder {
+            color: $color-black;
+        }
+    }
+
 }
 @mixin imput-icon-wrap {
     position: relative;

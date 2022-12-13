@@ -426,3 +426,27 @@
     color: $color-dark-blue !important;
     opacity: 1 !important;
 }
+
+.features-electro {
+    margin-top:32px;
+    p {
+        @include body-semibold-text;
+        margin-bottom: 16px;
+    }
+    input {
+        margin-bottom: 32px;
+        width: 100%;
+    } 
+}
+.features-electro__inputs-wrap {
+    display: flex;
+    justify-content: space-between;
+}
+.features-electro__input-now {
+    display: flex;
+    flex-direction: column;
+}
+.features-electro__input-meter {
+    display: flex;
+    flex-direction: column;
+}

@@ -31,6 +31,9 @@
 .input-text-disable {
     @include input-text-disable;
 }
+.input-text-uneditable {
+    @include input-text-uneditable;
+}
 .imput-icon-wrap {
     @include imput-icon-wrap;
 }
